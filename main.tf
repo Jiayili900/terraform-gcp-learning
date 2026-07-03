@@ -11,3 +11,13 @@ module "network" {
   project_id  = var.project_id
   environment = var.environment
 }
+
+module "subnet" {
+  source = "./modules/subnet"
+
+  project_id  = var.project_id
+  environment = var.environment
+  network_id  = module.network.network_id
+  cidr_range  = "10.0.1.0/24"
+  region      = var.region
+}
