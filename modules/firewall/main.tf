@@ -1,7 +1,7 @@
 resource "google_compute_firewall" "allow_ssh" {
   name    = "${var.environment}-allow-ssh"
-    network = var.network_id
-    project = var.project_id
+  network = var.network_id
+  project = var.project_id
 
   allow {
     protocol = "tcp"
@@ -9,5 +9,5 @@ resource "google_compute_firewall" "allow_ssh" {
   }
 
   source_ranges = ["0.0.0.0/0"]
-  
+
 }

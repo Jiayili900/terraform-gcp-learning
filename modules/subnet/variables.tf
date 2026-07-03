@@ -1,9 +1,9 @@
 variable "project_id" {
- type = string 
+  type = string
 }
 
 variable "environment" {
- type = string 
+  type = string
 }
 
 variable "network_id" {
