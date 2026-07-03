@@ -12,5 +12,5 @@ resource "google_storage_bucket" "terraform_state" {
     enabled = true
   }
   force_destroy = true
-  
+
 }
