@@ -21,3 +21,11 @@ module "subnet" {
   cidr_range  = "10.0.1.0/24"
   region      = var.region
 }
+
+module "firewall" {
+  source = "./modules/firewall"
+
+  project_id  = var.project_id
+  environment = var.environment
+  network_id  = module.network.network_id
+}
