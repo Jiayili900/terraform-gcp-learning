@@ -2,11 +2,16 @@
 .terraform/
 *.tfstate
 *.tfstate.*
-terraform.tfvars
-
-# VSCode
+crash.log
+# Variable files
+*.tfvars
+*.tfvars.json
+# CLI config
+.terraformrc
+terraform.rc
+# IDE
 .vscode/
-
-# OS
+# Mac
 .DS_Store
+# Windows
 Thumbs.db

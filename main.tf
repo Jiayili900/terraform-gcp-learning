@@ -39,3 +39,11 @@ module "compute" {
   zone        = "us-central1-a"
   subnet_id   = module.subnet.subnet_id
 }
+
+module "storage" {
+  source = "./modules/storage"
+
+  project_id  = var.project_id
+  bucket_name = "${var.project_id}-tfstate"
+  location    = "US"
+}
