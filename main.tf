@@ -29,3 +29,13 @@ module "firewall" {
   environment = var.environment
   network_id  = module.network.network_id
 }
+
+module "compute" {
+  source = "./modules/compute"
+
+  project_id  = var.project_id
+  environment = var.environment
+  region      = var.region
+  zone        = "us-central1-a"
+  subnet_id   = module.subnet.subnet_id
+}
